@@ -1,0 +1,4 @@
+# Phase 1 runtime dependencies (Python 3.10+)
+opencv-python>=4.8,<5.0
+mediapipe>=0.10,<0.11
+numpy>=1.24,<2.0
