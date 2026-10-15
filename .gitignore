@@ -1,0 +1,8 @@
+.venv/
+.venv-1/
+__pycache__/
+*.pyc
+data/
+drowsiness_log.csv
+*.mp4
+*.avi
