@@ -71,10 +71,10 @@ pip install -r requirements.txt
 ## Run
 
 ```bash
-python main.py                 # default webcam, logs to drowsiness_log.csv
-python main.py --camera 1      # choose a different camera index
-python main.py --no-log        # run without writing a CSV
-python main.py --calibration 5 # shorter calibration window (seconds)
+python phase1_prototype.py                 # default webcam, logs to drowsiness_log.csv
+python phase1_prototype.py --camera 1      # choose a different camera index
+python phase1_prototype.py --no-log        # run without writing a CSV
+python phase1_prototype.py --calibration 5 # shorter calibration window (seconds)
 ```
 
 For the first ~10 seconds keep your eyes open and look at the camera so it can

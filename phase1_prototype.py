@@ -7,9 +7,9 @@ Pipeline:
                   ->  on-screen overlay + per-frame CSV log
 
 Run:
-    python main.py                 # default webcam, logs to drowsiness_log.csv
-    python main.py --camera 1      # pick another camera index
-    python main.py --no-log        # disable CSV logging
+    python phase1_prototype.py                 # default webcam, logs to drowsiness_log.csv
+    python phase1_prototype.py --camera 1      # pick another camera index
+    python phase1_prototype.py --no-log        # disable CSV logging
 
 Press 'q' or Esc to quit.
 """
