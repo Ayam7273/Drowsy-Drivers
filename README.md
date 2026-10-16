@@ -105,3 +105,31 @@ python tests/test_features.py   # or run standalone, no pytest needed
 - Thresholds are heuristic defaults; tune `Thresholds` for your setup.
 - Calibration assumes you are alert and eyes-open during the warm-up window.
 - No audible alarm yet — state is visual + logged. That (and ML) is Phase 2+.
+
+## Run the demo (Phase 3: graded alerts + simulated autopilot)
+
+Double-click `run.bat` (first run installs everything, about 5 minutes), or:
+
+```
+.venv\Scripts\activate
+python demo.py
+```
+
+1. Sit in front of the webcam, eyes open, looking ahead for the 10 s calibration.
+2. Press **T** to simulate tiredness or **M** to simulate a microsleep, or really close your eyes for 2+ s.
+3. Escalation: WARNING (soft beep) -> PROMPT ("press SPACE", fast beeps) -> TAKEOVER ("AUTOPILOT ENGAGED", car brakes to 0 km/h).
+4. **SPACE** answers the prompt. **R** hands control back (only if the eyes are open). **K** recalibrates. **Q** quits.
+
+Options: `--rules-only` (no ML models), `--video clip.mp4`, `--mute`, `--prompt-timeout 5`, `--camera 1`.
+On exit it writes `demo_log.csv` (every frame) and `results/demo_summary.json` (average FPS, ms per frame, time per level, list of escalation events).
+
+### Train the models
+```
+python prepare_yawn_features.py
+python train_eval.py
+```
+### Tests
+```
+python -m unittest discover -s tests -v
+```
+Nothing here controls a real vehicle; the autopilot is a simulation.

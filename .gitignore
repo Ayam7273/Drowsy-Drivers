@@ -3,6 +3,7 @@
 __pycache__/
 *.pyc
 data/
+results/
 drowsiness_log.csv
 *.mp4
 *.avi

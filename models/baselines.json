@@ -1,0 +1,10 @@
+{
+  "yawn_tuned_mar": {
+    "threshold": 0.408305058333359,
+    "direction": 1
+  },
+  "eye_contrast_rule": {
+    "threshold": 38.43546442879263,
+    "direction": -1
+  }
+}
